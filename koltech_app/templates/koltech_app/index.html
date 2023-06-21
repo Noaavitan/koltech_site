@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/index.css'%}" />
+    <title>קול-טק</title>
+  </head>
+  <body dir="rtl">
+    <header>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li class="nav__item brand" href="#">קול-טק</li>
+          <li class="nav__item" href="#section--1">עלינו</li>
+          <li class="nav__item" href="#section--2">גלריה</li>
+          <li class="nav__item" href="#section--3">צור קשר</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="slider-container">
+      <h1>קול-טק<br />הגברה ותאורה</h1>
+      <div
+        class="slide"
+        style="
+          background-image: url('https://www.mondodr.com/wp-content/uploads/2020/05/Robe-Lux-Partum-189-P.jpg');
+        "
+      ></div>
+
+      <div
+        class="slide"
+        style="
+          background-image: url('https://i.ytimg.com/vi/Npv085lj6aI/maxresdefault.jpg');
+        "
+      ></div>
+
+      <div
+        class="slide"
+        style="
+          background-image: url('https://www.digitalavmagazine.com/wp-content/uploads/2021/01/The-Robe-Lighting-Show-4.jpg');
+        "
+      ></div>
+
+      <div class="controls-container">
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+      </div>
+    </div>
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">עלינו</h2>
+        <h3 class="section__header">חברת הגברה מהגדולות בישראל</h3>
+      </div>
+
+      <div class="features">
+        <div class="features_card">
+          <img
+            src="{% static 'images/aboutus3.png'%}"
+            data-src="img/digital.jpg"
+            alt="concert"
+            class="features__img"
+          />
+
+          <div class="features__feature">
+            <h5 class="features__header">אירועים מרכזיים</h5>
+            <p>בלה בלה בלה ימי עצמאות וכולי כל סוגי האירועים שעשינו .</p>
+          </div>
+        </div>
+
+        <div class="features_card">
+          <div class="features__feature">
+            <h5 class="features__header">שנות ניסיון</h5>
+            <p>עוד דברים לשאול את מור מה לכתוב כאן</p>
+          </div>
+
+          <img
+            src="{% static 'images/aboutus1.png'%}"
+            data-src="img/grow.jpg"
+            alt="employ"
+            class="features__img"
+          />
+        </div>
+        <div class="features_card">
+          <img
+            src="{% static 'images/aboutus2.png'%}"
+            data-src="img/card.jpg"
+            alt="concert"
+            class="features__img"
+          />
+
+          <div class="features__feature">
+            <h5 class="features__header">כותרת של משהו</h5>
+            <p>עוד משהו יפה לכתוב חגדלבדגח חנגחב חגיבנד</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">גלריה</h2>
+        <h3 class="section__header">תמונות של אירועים מרכזיים</h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide slide--1">
+          <div class="testimonial">
+            <h5 class="testimonial__header">הסבר אירועים</h5>
+            <blockquote class="testimonial__text">תמונה</blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name"></h6>
+              <p class="testimonial__location"></p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide slide--2">
+          <div class="testimonial">
+            <h5 class="testimonial__header"></h5>
+            <blockquote class="testimonial__text"></blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name"></h6>
+              <p class="testimonial__location"></p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide slide--3">
+          <div class="testimonial">
+            <h5 class="testimonial__header"></h5>
+            <blockquote class="testimonial__text"></blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name"></h6>
+              <p class="testimonial__location"></p>
+            </address>
+          </div>
+        </div>
+
+        <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <section class="section section--sign-up">
+      <div class="section__title">
+        <h3 class="section__header">עוד משפט על משהו</h3>
+      </div>
+      <button class="btn btn--show-modal">צור קשר</button>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#">עלינו</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">דרושים</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">צור קשר</a>
+        </li>
+      </ul>
+      <img src="img/icon.png" alt="Logo" class="footer__logo" />
+      <p class="footer__copyright">
+        &copy; Copyright by
+        <a
+          class="footer__link twitter-link"
+          target="_blank"
+          href="https://twitter.com/jonasschmedtman"
+          >נועה אביטן המלכה</a
+        >
+      </p>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your bank account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="{% static 'js/index.js'%}"></script>
+  </body>
+</html>
