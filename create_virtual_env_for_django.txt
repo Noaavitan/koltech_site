@@ -1,0 +1,9 @@
+create a new env in pythonanywhere bash console: mkvirtualenv --python=/usr/bin/python3.9 env39
+imports:
+pip install django
+pip install django-filter
+pip install django-crispy-forms
+pip install pandas
+pip install openpyxl
+pip install pillow
+pip install pathlib

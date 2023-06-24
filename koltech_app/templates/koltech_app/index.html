@@ -11,34 +11,30 @@
     <header>
       <nav class="nav">
         <ul class="nav__links">
-          <li class="nav__item brand" href="#">קול-טק</li>
-          <li class="nav__item" href="#section--1">עלינו</li>
-          <li class="nav__item" href="#section--2">גלריה</li>
-          <li class="nav__item" href="#section--3">צור קשר</li>
+          <li class="nav__item brand" href="#slider">קול-טק</li>
+          <li><a class="nav__item" href="#section--1">עלינו</a></li>
+          <li><a class="nav__item" href="#section--2">גלריה</a></li>
+          <li>
+            <a class="nav__item" href="#section--3">צור קשר</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <div class="slider-container">
-      <h1>קול-טק<br />הגברה ותאורה</h1>
+    <div id="slider" class="slider-container">
+      <h1><img class="slider-logo" src="{% static 'images/logo.png'%}" /></h1>
       <div
         class="slide"
-        style="
-          background-image: url('https://www.mondodr.com/wp-content/uploads/2020/05/Robe-Lux-Partum-189-P.jpg');
-        "
+        style="background-image: url('/statics/images/IMG_977.jpeg')"
       ></div>
 
       <div
         class="slide"
-        style="
-          background-image: url('https://i.ytimg.com/vi/Npv085lj6aI/maxresdefault.jpg');
-        "
+        style="background-image: url('/statics/images/DSC_2165.jpg')"
       ></div>
 
       <div
         class="slide"
-        style="
-          background-image: url('https://www.digitalavmagazine.com/wp-content/uploads/2021/01/The-Robe-Lighting-Show-4.jpg');
-        "
+        style="background-image: url('/statics/images/DSC_2222.jpg')"
       ></div>
 
       <div class="controls-container">
@@ -98,7 +94,7 @@
       </div>
     </section>
 
-    <section class="section" id="section--3">
+    <section class="section" id="section--2">
       <div class="section__title section__title--testimonials">
         <h2 class="section__description">גלריה</h2>
         <h3 class="section__header">תמונות של אירועים מרכזיים</h3>
@@ -151,35 +147,27 @@
       </div>
     </section>
 
-    <section class="section section--sign-up">
-      <div class="section__title">
-        <h3 class="section__header">עוד משפט על משהו</h3>
-      </div>
+    <footer id="section--3" class="footer">
       <button class="btn btn--show-modal">צור קשר</button>
-    </section>
-
-    <footer class="footer">
       <ul class="footer__nav">
         <li class="footer__item">
-          <a class="footer__link" href="#">עלינו</a>
+          <a
+            class="footer__link"
+            target="_blank"
+            href="https://www.instagram.com/koltech_ltd/"
+            >instegram</a
+          >
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">דרושים</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">צור קשר</a>
+          <a
+            class="footer__link"
+            target="_blank"
+            href="https://m.facebook.com/people/Kol-Tech-Sound-Light/100055086832360/?locale=he_IL"
+            >facebook</a
+          >
         </li>
       </ul>
-      <img src="img/icon.png" alt="Logo" class="footer__logo" />
-      <p class="footer__copyright">
-        &copy; Copyright by
-        <a
-          class="footer__link twitter-link"
-          target="_blank"
-          href="https://twitter.com/jonasschmedtman"
-          >נועה אביטן המלכה</a
-        >
-      </p>
+      <p class="footer__copyright">created by Noa Avitan</p>
     </footer>
 
     <div class="modal hidden">

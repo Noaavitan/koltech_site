@@ -20,7 +20,7 @@ function changeSlides() {
     activeSlide = 0;
   }
 
-  console.log(prevActive, activeSlide);
+  // console.log(prevActive, activeSlide);
 }
 
 controls.forEach((control) => {
@@ -32,5 +32,19 @@ controls.forEach((control) => {
 
     clearInterval(num);
     num = setInterval(changeSlides, 4000);
+  });
+});
+
+// nav smooth scrol
+const navItems = document.querySelectorAll(".nav__item");
+navItems.forEach((item) => {
+  // const element = document.getElementById(`#section--${item.id}`);
+  item.addEventListener("click", (e) => {
+    e.preventDefault;
+    document.querySelector(item.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+    console.log(item);
+    // console.log(element);
   });
 });
