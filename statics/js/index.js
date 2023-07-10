@@ -1,3 +1,5 @@
+"use strict";
+
 // slider
 const slides = document.querySelectorAll(".slide");
 const controls = document.querySelectorAll(".control");
@@ -38,13 +40,32 @@ controls.forEach((control) => {
 // nav smooth scrol
 const navItems = document.querySelectorAll(".nav__item");
 navItems.forEach((item) => {
-  // const element = document.getElementById(`#section--${item.id}`);
   item.addEventListener("click", (e) => {
     e.preventDefault;
     document.querySelector(item.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
     console.log(item);
-    // console.log(element);
   });
+});
+
+// modal window
+const contentBtn = document.querySelector(".btn--show-modal");
+const modalWindow = document.querySelector(".modal");
+const closeBtn = document.querySelector(".btn--close-modal");
+const overlay = document.querySelector(".overlay");
+
+contentBtn.addEventListener("click", () => {
+  modalWindow.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  modalWindow.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+overlay.addEventListener("click", () => {
+  modalWindow.classList.add("hidden");
+  overlay.classList.add("hidden");
 });

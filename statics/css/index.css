@@ -12,6 +12,16 @@
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
+@font-face {
+  font-family: "Assistant ExtraLight";
+  src: url("/statics/fonts/Assistant-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Snas Hebrew Light";
+  src: url("/statics/fonts/IBMPlexSansHebrew-Medium.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +35,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Snas Hebrew Light", sans-serif;
   font-weight: 300;
   color: #444;
   line-height: 1.9;
@@ -70,7 +80,7 @@ nav {
   text-decoration: none;
   list-style: none;
   color: white;
-  font-family: sans-serif;
+  font-family: "IBM Plex Snas Hebrew Light";
   font-size: 20px;
   font-weight: bold;
   padding: 8px 17px;
@@ -213,6 +223,8 @@ nav {
   padding: 8rem 2rem;
   border-top: 1px solid #ddd;
   transition: transform 1s, opacity 1s;
+  display: grid;
+  align-items: center;
 }
 
 .section--hidden {
@@ -519,12 +531,19 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 60rem;
+  max-width: 50rem;
+  height: 70%;
   background-color: #f3f3f3;
-  padding: 5rem 6rem;
+  padding: 4rem 2rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 1001;
   transition: all 0.5s;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .overlay {
@@ -535,32 +554,30 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
-  z-index: 100;
+  z-index: 1000;
   transition: all 0.5s;
 }
 
 .modal__header {
-  font-size: 3.25rem;
-  margin-bottom: 4.5rem;
-  line-height: 1.5;
+  font-size: rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .modal__form {
-  margin: 0 3rem;
+  margin: 0 1rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  gap: 2.5rem;
 }
 
 .modal__form label {
-  font-size: 1.7rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .modal__form input {
-  font-size: 1.7rem;
-  padding: 1rem 1.5rem;
+  font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
 }
@@ -575,8 +592,8 @@ img {
   font-family: inherit;
   color: inherit;
   position: absolute;
-  top: 0.5rem;
-  right: 2rem;
+  top: 0rem;
+  right: 1rem;
   font-size: 4rem;
   cursor: pointer;
   border: none;
@@ -586,4 +603,107 @@ img {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+@media screen and (max-width: 490px) {
+  body {
+  }
+  .section {
+  }
+  .nav__links {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    margin: 0px 0 0 0;
+  }
+  .nav__item {
+    color: #c2bdbd;
+    font-family: "IBM Plex Snas Hebrew Light";
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 17px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .nav__item:hover::before {
+    background: none;
+    box-shadow: none;
+    transform: scale(1);
+  }
+  .nav__item:hover {
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+
+  .brand:hover {
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+  .brand:hover:active {
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+  .slide {
+    background-size: fill;
+    height: 160vw;
+  }
+  .slider-container {
+    height: 160vw;
+    width: 100%;
+  }
+
+  .section__description {
+    font-size: 1.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .section__header {
+    font-size: 1.9rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    justify-items: center;
+  }
+
+  .features__img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    /* top: 0px; */
+  }
+
+  .features__feature {
+    justify-self: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    /* padding: 0%; */
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .features_card {
+    width: 340%;
+    height: fit-content;
+    display: grid;
+  }
+
+  .features__header {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
 }
