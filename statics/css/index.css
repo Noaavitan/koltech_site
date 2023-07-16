@@ -301,7 +301,7 @@ img {
 .features {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem;
+  gap: 1.8rem;
   margin: 0 8rem;
 }
 
@@ -320,7 +320,7 @@ img {
 
 .features_card {
   width: 100%;
-  height: 70%;
+  height: fit-content%;
   display: inline-flex;
   justify-content: center;
   background: #ffffff7a;
@@ -615,6 +615,7 @@ img {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     margin: 0px 0 0 0;
+    height: 14vw;
   }
   .nav__item {
     color: #c2bdbd;
@@ -658,7 +659,7 @@ img {
     height: 160vw;
   }
   .slider-container {
-    height: 160vw;
+    height: 170vw;
     width: 100%;
   }
 
@@ -697,7 +698,7 @@ img {
   }
 
   .features_card {
-    width: 340%;
+    width: 200%;
     height: fit-content;
     display: grid;
   }
