@@ -689,7 +689,9 @@ img {
     border-radius: 10px;
     /* top: 0px; */
   }
-
+  .second-img {
+    align-self: flex-end;
+  }
   .features__feature {
     justify-self: center;
     justify-content: center;
