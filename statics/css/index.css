@@ -656,11 +656,14 @@ img {
   }
   .slide {
     background-size: fill;
-    height: 160vw;
+    height: 170vw;
   }
   .slider-container {
     height: 170vw;
     width: 100%;
+  }
+  .control {
+    visibility: hidden;
   }
 
   .section__description {
