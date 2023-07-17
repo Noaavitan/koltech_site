@@ -689,9 +689,15 @@ img {
     border-radius: 10px;
     /* top: 0px; */
   }
-  .second-img {
+  .second-card {
+    display: flex;
     align-self: flex-end;
   }
+
+  .second-feature {
+    order: 2;
+  }
+
   .features__feature {
     justify-self: center;
     justify-content: center;
