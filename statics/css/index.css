@@ -320,7 +320,7 @@ img {
 
 .features_card {
   width: 100%;
-  height: fit-content%;
+  height: 10;
   display: inline-flex;
   justify-content: center;
   background: #ffffff7a;
@@ -685,7 +685,7 @@ img {
 
   .features__img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     border-radius: 10px;
     /* top: 0px; */
   }
@@ -703,14 +703,14 @@ img {
     justify-content: center;
     width: 100%;
     margin: auto;
-    /* padding: 0%; */
+    padding: 10%;
     font-size: 0.9rem;
     text-align: center;
   }
 
   .features_card {
     width: 200%;
-    height: fit-content;
+    height: 100%;
     display: grid;
   }
 
