@@ -54,8 +54,9 @@ const allSections = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (entry.isIntersecting) entry.target.classList.remove("section--hidden");
+
+  observer.unobserve(entery.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
