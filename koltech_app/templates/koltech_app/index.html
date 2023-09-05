@@ -112,55 +112,21 @@
     </section>
 
     <section class="section" id="section--2">
-      <div class="section__title section__title--testimonials">
+      <div class="section__title">
         <h2 class="section__description">גלריה</h2>
-        <h3 class="section__header">תמונות של אירועים מרכזיים</h3>
+        <h3 class="section__header">תמונות מאירועים והופעות</h3>
       </div>
+      <div class="container-gallery">
+        {% for img in list_img %}
 
-      <div class="slider">
-        <div class="slide slide--1">
-          <div class="testimonial">
-            <h5 class="testimonial__header">הסבר אירועים</h5>
-            <blockquote class="testimonial__text">תמונה</blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name"></h6>
-              <p class="testimonial__location"></p>
-            </address>
-          </div>
+        <div class="gallery__item">
+          <img
+            class="gallery__image"
+            src="/statics/gallery-images/{{img}}"
+            alt="Imagen 1"
+          />
         </div>
-
-        <div class="slide slide--2">
-          <div class="testimonial">
-            <h5 class="testimonial__header"></h5>
-            <blockquote class="testimonial__text"></blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name"></h6>
-              <p class="testimonial__location"></p>
-            </address>
-          </div>
-        </div>
-
-        <div class="slide slide--3">
-          <div class="testimonial">
-            <h5 class="testimonial__header"></h5>
-            <blockquote class="testimonial__text"></blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name"></h6>
-              <p class="testimonial__location"></p>
-            </address>
-          </div>
-        </div>
-
-        <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
-        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
-        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
-        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
+        {% endfor %}
       </div>
     </section>
 
@@ -189,24 +155,40 @@
 
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">לפרטים ויצירת קשר</h2>
-      <p>מייל - koltech1@gmail.com</p>
-      <p>שלומי אביטן - 050-4213000</p>
-      <p>יוסי (צקצק) בן דוד - 050-4212000</p>
-      <p>מור אביטן - 052-7727852</p>
-      <p>הגנן 19, באר שבע</p>
-      <!-- <form class="modal__form">
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" />
-        <label>Email Address</label>
-        <input type="email" />
-        <button class="btn">Next step &rarr;</button>
-      </form> -->
+      <form
+        name="contactForm"
+        method="post"
+        enctype="multipart/form-data"
+        onsubmit="return validateForm()"
+      >
+        {% csrf_token %}
+        <div class="contact-box">
+          <h2>צור קשר</h2>
+          <input
+            type="text"
+            class="field"
+            placeholder="Your Name"
+            name="name"
+          />
+          <input
+            type="text"
+            class="field"
+            placeholder="Your Email"
+            name="email"
+          />
+          <input type="text" class="field" placeholder="Phone" name="phone" />
+          <textarea
+            placeholder="Message"
+            class="field"
+            name="message"
+          ></textarea>
+          <button type="submit" class="btn">שלח</button>
+        </div>
+      </form>
     </div>
     <div class="overlay hidden"></div>
 
     <script src="{% static 'js/index.js'%}"></script>
+    <script src="{% static 'js/validateForm.js'%}"></script>
   </body>
 </html>
