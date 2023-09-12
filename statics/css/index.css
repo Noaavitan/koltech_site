@@ -258,6 +258,7 @@ nav {
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
+  color: black;
   border: none;
   padding: 1rem 3.5rem;
   border-radius: 10rem;
@@ -759,6 +760,7 @@ textarea {
     grid-template-columns: 1fr;
     gap: 4rem;
     justify-items: center;
+    width: 100%;
   }
 
   .features__img {
@@ -787,7 +789,7 @@ textarea {
   }
 
   .features_card {
-    width: 200%;
+    width: 90%;
     height: 100%;
     display: grid;
   }
