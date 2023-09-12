@@ -229,8 +229,8 @@ nav {
 }
 
 .section--hidden {
-  /* opacity: 0; */
-  /* transform: translateY(8rem); */
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .section__title {
@@ -445,7 +445,7 @@ img {
 .gallery__image {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -801,8 +801,10 @@ textarea {
   }
   .container-gallery {
     grid-template-columns: 1fr 1fr;
-    width: 80%;
+    width: 95%;
     justify-items: center;
     margin: 0px 20px 0px 20px;
+  }
+  .gallery__image {
   }
 }
