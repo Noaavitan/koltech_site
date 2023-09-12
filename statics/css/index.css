@@ -505,7 +505,7 @@ img {
 
 @media (max-width: 850px) {
   .container-gallery {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
 }
@@ -798,5 +798,11 @@ textarea {
   .features__header {
     font-size: 1rem;
     margin-bottom: 0rem;
+  }
+  .container-gallery {
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
   }
 }
