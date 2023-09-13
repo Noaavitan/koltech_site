@@ -1,14 +1,9 @@
 :root {
   --color-primary: #fcfd07;
   --color-secondary: #302c1fc9;
-  --color-tertiary: #f62a2a;
   --color-primary-darker: hwb(60 10% 14%);
-  --color-secondary-darker: #24211ac9;
-  --color-tertiary-darker: #b82424;
   --color-primary-opacity: #5ec5763a;
   --color-secondary-opacity: #ffcd0331;
-  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
 @font-face {
@@ -638,35 +633,6 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
-/* .modal__header {
-  font-size: rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.modal__form {
-  margin: 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-}
-
-.modal__form label {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.modal__form input {
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-}
-
-.modal__form button {
-  grid-column: 1 / span 2;
-  justify-self: center;
-  margin-top: 1rem;
-} */
 
 .btn--close-modal {
   font-family: inherit;

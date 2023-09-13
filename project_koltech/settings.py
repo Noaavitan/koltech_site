@@ -11,23 +11,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 from pathlib import Path
 import os
-# from dotenv import load_dotenv
 import json
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATICS_DIR = os.path.join(BASE_DIR,"statics")
-
-# EMAIL CONFIGURATION (for contact form)
-# path_to_env_file = "C:\Users\WIN10\AppData\Local\Programs\Python\Python39\Scripts\project_koltech\.env"
-# load_dotenv(path_to_env_file)   # or just load_dotenv() if .env is in the same folder
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = json.load(open(str(BASE_DIR.parent)+"/ENV.JSON"))['GMAIL_USER_EMAIL']
-# EMAIL_HOST_PASSWORD  = json.load(open(str(BASE_DIR.parent)+"/ENV.JSON"))['GMAIL_USER_PASSWORD']
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
